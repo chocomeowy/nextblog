@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Logo from './Logo';
-import classes from '../Layout/MainNavigation.module.css';
+import classes from '../layout/MainNavigation.module.css';
 
 const MainNavigation = () => {
   return (
