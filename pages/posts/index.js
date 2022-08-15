@@ -1,7 +1,16 @@
+import Head from 'next/head';
 import AllPosts from '../../components/posts/AllPosts';
 import { getAllPosts } from '../../lib/posts-util';
 const AllPostsPage = (props) => {
-  return <AllPosts posts={props.posts} />;
+  return (
+    <>
+      <Head>
+        <title>All posts</title>
+        <meta name='description' content='A list of all blog posts' />
+      </Head>
+      <AllPosts posts={props.posts} />
+    </>
+  );
 };
 
 export function getStaticProps() {
