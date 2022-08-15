@@ -20,9 +20,9 @@ const handler = async (req, res) => {
       name,
       message,
     };
-
+    const mongodbURI = process.env.MONGODB_URI;
     const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.3q3c1.mongodb.net/my-site?retryWrites=true&w=majority`;
-    const client = new MongoClient(uri, {
+    const client = new MongoClient(mongodbURI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       serverApi: ServerApiVersion.v1,
